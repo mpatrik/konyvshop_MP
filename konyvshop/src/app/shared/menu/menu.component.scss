@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:wght@500&display=swap');
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: #eee;
+  box-shadow: 0 3px 10px 0 #666;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.menu a {
+  transition: all 0.3s ease 0s;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.menu a:hover {
+  background-color: var(--orange);
+  color: #eee;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.logo1 {
+  color: var(--orange);
+}
+
