@@ -1,1 +1,18 @@
-<p>products works!</p>
+<table class="products">
+  <tr *ngFor="let row of books_array">
+    <td class="products-img">
+        <img [src]="'assets/imgs-book/' + row['img'] + '.JPG'" alt="image">
+    </td>
+    <td class="products-desc">
+      <div>{{row['title']}}</div>
+      <div>{{row['author']}}</div>
+      <div>{{row['publisher']}}, {{row['year']}}</div>
+      <div *ngFor="let i = index">
+        {{row['description'][i]}}
+        ...
+      </div>
+      <div>{{row['price']}} Ft</div>
+    </td>
+  </tr>
+</table>
+
