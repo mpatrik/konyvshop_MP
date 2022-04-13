@@ -4,14 +4,14 @@
         <img [src]="'assets/imgs-book/' + row['img'] + '.JPG'" alt="image">
     </td>
     <td class="products-desc">
-      <div>{{row['title']}}</div>
-      <div>{{row['author']}}</div>
-      <div>{{row['publisher']}}, {{row['year']}}</div>
-      <div *ngFor="let i = index">
-        {{row['description'][i]}}
-        ...
-      </div>
-      <div>{{row['price']}} Ft</div>
+      <div class="title">{{row['title']}}</div>
+      <div class="author">{{row['author']}}</div>
+      <div class="publisher">{{row['publisher']}}, {{row['year']}}</div>
+      <div class="description">{{row['description'].substr(0,250)}}...</div>
+    </td>
+    <td class="tocart-button">
+      <button (click)="putToCart(row)">kosárba</button>
+      <div class="price">{{row['price']}} Ft</div>
     </td>
   </tr>
 </table>

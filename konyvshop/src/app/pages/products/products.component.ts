@@ -22,4 +22,7 @@ export class ProductsComponent implements OnInit {
   }
 
 
+  putToCart(row: Object) {
+    console.log(row);
+  }
 }

@@ -10,6 +10,8 @@
   font-family: nunito;
 }
 body {
-  min-height: 100vh;
+  min-height: 200vh;
   background-color: #ccc;
+  background-image: url("assets/backgound.jpg");
+  background-attachment: fixed;
 }

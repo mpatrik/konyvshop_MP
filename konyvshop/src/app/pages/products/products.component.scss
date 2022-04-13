@@ -1,12 +1,14 @@
 .products {
   width: 70%;
   margin: 100px auto;
+  border-collapse: collapse;
 }
 
 .products-img img {
   height: 175px;
   width: 125px;
-  margin: auto;
+  margin: 0;
+  cursor: pointer;
 }
 
 .products-img {
@@ -14,6 +16,55 @@
 }
 
 .products tr {
-  height: 175px;
-  outline: 2px solid red;
+  background-color: #eeeeee;
+  z-index: 0;
 }
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.author, .publisher {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.tocart-button {
+  width: 150px;
+}
+
+.tocart-button button {
+  height: 40px;
+  width: 120px;
+  background-color: var(--orange);
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #eeeeee;
+  border: none;
+  position: relative;
+  top: 0;
+  left: 15px;
+  box-shadow: 0 1px 10px 0 #666;
+}
+
+.price {
+  position: relative;
+  bottom: -10px;
+  left: 47px;
+}
+
+.tocart-button button:hover {
+  background-color: #e3661f;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0 5px 10px 0 #666;
+}
+
+.products tr:hover {
+  box-shadow: 0 0 10px 5px #666;
+  z-index: 1;
+}
+
+
