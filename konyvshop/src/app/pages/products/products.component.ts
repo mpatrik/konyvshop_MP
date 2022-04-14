@@ -8,7 +8,7 @@ import { books } from '../../shared/constants/books-db';
 })
 export class ProductsComponent implements OnInit {
   headers : string[] = [];
-  books_array : any = [];
+  books_array : Array<any>;
 
   constructor() {
     this.headers = ['id', 'title', 'author', 'publisher', 'year', 'pages', 'price'];

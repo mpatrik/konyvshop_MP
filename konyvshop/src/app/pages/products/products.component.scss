@@ -26,9 +26,13 @@
   cursor: pointer;
 }
 
-.author, .publisher {
+.author, .publisher, .genre {
   font-style: italic;
   font-size: 14px;
+}
+
+.genre::first-letter {
+  text-transform: uppercase;
 }
 
 .tocart-button {
@@ -63,8 +67,12 @@
 }
 
 .products tr:hover {
-  box-shadow: 0 0 10px 5px #666;
-  z-index: 1;
+  background-color: #cccccc;
+}
+
+.title:hover {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
 }
 
 
