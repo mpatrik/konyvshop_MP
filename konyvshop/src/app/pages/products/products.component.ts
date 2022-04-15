@@ -8,11 +8,11 @@ import { books } from '../../shared/constants/books-db';
 })
 export class ProductsComponent implements OnInit {
   headers : string[] = [];
-  books_array : Array<any>;
+  booksArray : Array<any>;
 
   constructor() {
     this.headers = ['id', 'title', 'author', 'publisher', 'year', 'pages', 'price'];
-    this.books_array = books;
+    this.booksArray = books;
 
   }
 

@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:wght@500&display=swap');
+
 :root {
   --orange: #d5580a;
 }
@@ -7,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: nunito;
+  font-family: nunito, sans-serif;
 }
 body {
   min-height: 100vh;
