@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatSidenav} from "@angular/material/sidenav";
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'konyvshop';
 
+  onToggleSidenav(sidenav: MatSidenav) {
+    sidenav.toggle();
+  }
+
+  onClose(event: any, sidenav: MatSidenav) {
+    if (event === true) {
+      sidenav.close();
+    }
+  }
 }

@@ -7,11 +7,17 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  @Output() onCloseSidenav: EventEmitter<boolean> = new EventEmitter();
+
   constructor() { }
 
 
 
   ngOnInit(): void {
+  }
+
+  close() {
+    this.onCloseSidenav.emit(true);
   }
 
 }

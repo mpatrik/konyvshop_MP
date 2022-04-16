@@ -1,3 +1,4 @@
+/*
 .menu-container {
   display: flex;
   justify-content: space-between;
@@ -38,4 +39,8 @@
 .logo span:first-child {
   color: var(--orange);
 }
+*/
 
+a:hover, a:active {
+  color: var(--orange);
+}

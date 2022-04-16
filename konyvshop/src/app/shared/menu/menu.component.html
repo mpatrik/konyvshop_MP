@@ -1,3 +1,28 @@
+<mat-nav-list>
+  <a mat-list-item routerLink="main" (click)="close()">
+    <mat-icon>home</mat-icon>
+    <span>kezdőlap</span>
+  </a>
+  <a mat-list-item routerLink="products" (click)="close()">
+    <mat-icon>auto_stories</mat-icon>
+    <span>könyvek</span>
+  </a>
+  <a mat-list-item routerLink="cart" (click)="close()">
+    <mat-icon>shopping_cart</mat-icon>
+    <span>kosár</span>
+  </a>
+  <a mat-list-item routerLink="login" (click)="close()">
+    <mat-icon>login</mat-icon>
+    <span>belépés</span>
+  </a>
+  <a mat-list-item routerLink="signup" (click)="close()">
+    <mat-icon>app_registration</mat-icon>
+    <span>regisztráció</span>
+  </a>
+</mat-nav-list>
+
+
+<!--
 <div class="menu-container">
   <div class="logo" routerLink="main"><span>könyv</span><span>shop</span></div>
   <nav>
@@ -10,3 +35,4 @@
     </ul>
   </nav>
 </div>
+-->
