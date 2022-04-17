@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import {ProductsComponent} from "./products.component";
+import {ExtendedModule, FlexModule} from "@angular/flex-layout";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -11,7 +13,10 @@ import {ProductsComponent} from "./products.component";
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    FlexModule,
+    ExtendedModule,
+    MatIconModule
   ]
 })
 export class ProductsModule { }

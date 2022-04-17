@@ -8,10 +8,15 @@
       <div class="author">{{row['author']}}</div>
       <div class="publisher">{{row['publisher']}}, {{row['year']}}</div>
       <div class="genre">{{row['genre']}}</div>
-      <div class="description">{{row['description'].substr(0,250)}}...</div>
+      <div class="description" fxHide.xs>{{row['description'].substr(0,250)}}...</div>
     </td>
     <td class="tocart-button">
+      <span fxHide.sm fxHide.xs>
       <button (click)="putToCart(row)">kosárba</button>
+      </span>
+      <span fxHide.gt-sm>
+      <button (click)="putToCart(row)"><mat-icon>shopping_cart</mat-icon></button>
+      </span>
       <div class="price">{{row['price']}} Ft</div>
     </td>
   </tr>

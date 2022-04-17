@@ -58,6 +58,7 @@
   position: relative;
   bottom: -10px;
   left: 47px;
+  font-weight: bold;
 }
 
 
@@ -80,4 +81,36 @@
   text-decoration-thickness: 2px;
 }
 
+// HOVER EFFECTS END
+
+@media screen and (max-width: 959px) {
+  .products {
+    width: 100%;
+  }
+
+  .tocart-button {
+    width: 100px;
+  }
+
+  .tocart-button button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    left: 45px;
+  }
+
+  .price {
+    left: 40px
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tocart-button button {
+    left: 30px;
+  }
+
+  .price {
+    left: 25px;
+  }
+}
 

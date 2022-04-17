@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl} from "@angular/forms";
 import {Router} from "@angular/router";
 import {FakeLoadingService} from "../../shared/services/fake-loading.service";
-import {Subscription} from "rxjs";
+import {Observable, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-login',
@@ -16,12 +16,16 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   loadingSubscription?: Subscription;
 
+  loading: boolean = false;
+  private loadingObservation?: Observable<boolean>;
+
   constructor(private router: Router, private loadingService: FakeLoadingService) { }
 
   ngOnInit(): void {
   }
 
   async login() {
+    this.loading = true;
     // Promise
     /*this.loadingService.loadingWithPromise(this.email.value, this.password.value).then((_: boolean) => {
       this.router.navigateByUrl('/main');
@@ -42,8 +46,18 @@ export class LoginComponent implements OnInit, OnDestroy {
     */
 
     // Observable
-    const subscription = this.loadingService.loadingWithObservable(this.email.value, this.password.value).subscribe((data: boolean) => {
-      console.log(data);
+    this.loadingObservation = this.loadingService.loadingWithObservable(this.email.value, this.password.value);
+    this.loadingSubscription = this.loadingObservation
+      .subscribe(
+        { next: (data: boolean) => {
+          this.router.navigateByUrl('/main');
+          }, error: (error) => {
+            console.error(error);
+            this.loading = false;
+          }, complete: () => {
+            console.log('finally');
+            this.loading = false;
+          }
     });
   }
 
