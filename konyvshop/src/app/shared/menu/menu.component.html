@@ -11,12 +11,20 @@
     <mat-icon>shopping_cart</mat-icon>
     <span>kosár</span>
   </a>
-  <a mat-list-item routerLink="login" (click)="close()">
+  <a mat-list-item routerLink="login" (click)="close()" *ngIf="!(loggedInUser)">
     <mat-icon>login</mat-icon>
     <span>belépés</span>
   </a>
-  <a mat-list-item routerLink="signup" (click)="close()">
+  <a mat-list-item routerLink="signup" (click)="close()" *ngIf="!(loggedInUser)">
     <mat-icon>app_registration</mat-icon>
     <span>regisztráció</span>
+  </a>
+  <a mat-list-item routerLink="profile" (click)="close()" *ngIf="loggedInUser">
+    <mat-icon>person</mat-icon>
+    <span>profil</span>
+  </a>
+  <a mat-list-item routerLink="login" (click)="close(true)" *ngIf="loggedInUser">
+    <mat-icon>logout</mat-icon>
+    <span>kilépés</span>
   </a>
 </mat-nav-list>

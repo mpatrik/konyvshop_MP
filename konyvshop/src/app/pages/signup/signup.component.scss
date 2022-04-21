@@ -38,6 +38,13 @@ mat-form-field {
 button {
   width: 100px;
   margin: 10px 0;
+  box-shadow: 0 1px 10px 0 #666;
+}
+
+button:hover {
+  background-color: #e3661f;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0 5px 10px 0 #666;
 }
 
 h1 {

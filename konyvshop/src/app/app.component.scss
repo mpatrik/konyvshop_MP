@@ -29,10 +29,26 @@ nav {
   color: var(--orange);
 }
 
-.menu a:hover, .menu a:focus {
+.menu a:hover, .cart:hover {
   background-color: var(--orange);
   color: #eee;
+  box-shadow: 0 5px 10px 0 #666;
 }
+
+.cart {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.cart-menu-icon {
+  position: relative;
+  top: 8px;
+  left: 8px;
+}
+
 // NAVBAR END
 
 mat-sidenav-content, mat-sidenav-container {
@@ -42,3 +58,4 @@ mat-sidenav-content, mat-sidenav-container {
 mat-sidenav {
   width: 250px;
 }
+

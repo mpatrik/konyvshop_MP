@@ -52,6 +52,7 @@
   top: 0;
   left: 15px;
   box-shadow: 0 1px 10px 0 #666;
+  text-align: center;
 }
 
 .price {
@@ -61,8 +62,10 @@
   font-weight: bold;
 }
 
-
-
+mat-icon {
+  position: relative;
+  top: 4px;
+}
 
 // HOVER EFFECTS
 
@@ -86,6 +89,7 @@
 @media screen and (max-width: 959px) {
   .products {
     width: 100%;
+    margin-right: 0;
   }
 
   .tocart-button {
@@ -104,6 +108,7 @@
   }
 }
 
+
 @media screen and (max-width: 400px) {
   .tocart-button button {
     left: 30px;
@@ -112,5 +117,6 @@
   .price {
     left: 25px;
   }
+
 }
 

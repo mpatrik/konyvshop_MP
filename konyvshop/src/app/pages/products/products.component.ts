@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { books } from '../../shared/constants/books-db';
 
 @Component({
@@ -7,11 +7,10 @@ import { books } from '../../shared/constants/books-db';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  headers : string[] = [];
   booksArray : Array<any>;
 
+
   constructor() {
-    this.headers = ['id', 'title', 'author', 'publisher', 'year', 'pages', 'price'];
     this.booksArray = books;
 
   }

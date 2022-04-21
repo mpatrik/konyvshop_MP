@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -7,7 +7,9 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  @Input() loggedInUser?: firebase.default.User | null;
   @Output() onCloseSidenav: EventEmitter<boolean> = new EventEmitter();
+  @Output() onLogout: EventEmitter<boolean> = new EventEmitter();
 
   constructor() { }
 
@@ -16,8 +18,12 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  close() {
+  close(logout?: boolean) {
     this.onCloseSidenav.emit(true);
+    if (logout === true) {
+      this.onLogout.emit(logout);
+    }
+
   }
 
 }
