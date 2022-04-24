@@ -1,6 +1,6 @@
 <table class="products">
   <tr *ngFor="let row of booksArray">
-    <app-book *ngIf="false"></app-book>
+    <!--<app-book *ngIf="false" [bookObject]="row"></app-book>-->
     <td class="products-img">
         <img [src]="'assets/imgs-book/' + row['img'] + '.JPG'" alt="image" [routerLink]="'/products/book'">
     </td>

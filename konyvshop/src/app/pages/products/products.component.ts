@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { books } from '../../shared/constants/books-db';
+import {Book} from "../../shared/models/Book";
 
 @Component({
   selector: 'app-products',
@@ -7,12 +8,10 @@ import { books } from '../../shared/constants/books-db';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  booksArray : Array<any>;
-
+  booksArray : Array<Book>;
 
   constructor() {
     this.booksArray = books;
-
   }
 
 
@@ -21,7 +20,7 @@ export class ProductsComponent implements OnInit {
   }
 
 
-  putToCart(row: Object) {
+  putToCart(row: Book) {
     console.log(row);
   }
 }

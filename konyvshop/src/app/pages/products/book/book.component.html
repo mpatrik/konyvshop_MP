@@ -1,16 +1,14 @@
 <mat-card fxFlex>
-  <img class="book-img" src="assets/imgs-book/hullamsir.JPG" alt="image">
+  <img class="book-img" [src]="'../../../../assets/imgs-book/' + bookObject['img'] + '.JPG'" alt="image">
   <div>
-    <div class="book-title">CÍM</div>
-    <div class="book-author">SZERZŐ</div>
-    <div class="book-publisher">KIADÓ, xxxx</div>
-    <div class="book-genre">MŰFAJ</div>
+    <div class="book-title">{{bookObject['title']}}</div>
+    <div class="book-author">{{bookObject['author']}}</div>
+    <div class="book-publisher">{{bookObject['publisher']}}, {{bookObject['year']}}</div>
+    <div class="book-genre">{{bookObject['genre']}}</div>
   </div>
   <span>Összefoglaló:</span>
-  <div class="book-desc">Kardos Júlia, a keszthelyi rendőrség nyomozója éppen túl van élete ügyén. Boldognak és elégedettnek kellene lennie, mégis az egyik gimnáziumi barátjától kölcsönkapott siófoki luxusapartmanban tölti a napjait, és igyekszik számot vetni a múltjával és még inkább a jelenével. Amikor holttestet találnak a Balatonban, Júlia mindent megtesz, hogy a végére járjon a dolgoknak. Pedig az ügy nem hozzá, hanem egy fiatal rendőrtiszthez kerül, aki először magabiztosan vág bele a nyomozásba, később azonban elbizonytalanodik. Vajon elfogadja Kardos segítségét? Elfogadhatja-e egyáltalán? Mert mi van, ha Júlia esetleg érintett az ügyben? És mi van, ha épp ő a kulcs a megoldáshoz? Szlavicsek Judit krimijének helyszíne ezúttal is a Balaton. A csendes, a haragvó, a befogadó, a bosszúálló Balaton.
-      SZLAVICSEK JUDIT 1974-ben született Kaposváron. A Pécsi Tudományegyetemen magyar nyelv és irodalom szakon diplomázott, szakdolgozatát a krimi és a szépirodalom kapcsolatáról írta. Később elvégezte a jogi egyetemet is, és jogászként dolgozott. Első krimije 2020-ban jelent meg Légy/ott címmel. Jelenleg a Balatonnál él a családjával.
-  </div>
-  <span class="book-price">xxxx Ft</span>
+  <div class="book-desc">{{bookObject['description']}}</div>
+  <span class="book-price">{{bookObject['price']}} Ft</span>
   <button class="tocart-button">kosárba</button>
-  <span>xxx oldal - ISBN: 9789634339847</span>
+  <span>{{bookObject['price']}} oldal - ISBN: {{bookObject['id']}}</span>
 </mat-card>
