@@ -1,1 +1,35 @@
-<p>cart works!</p>
+<ng-container class="cart-list" *ngIf="products.length">
+  <table>
+    <tr>
+      <th>Cím</th>
+      <th>Borítókép</th>
+      <th>Adatok</th>
+      <th>Ár</th>
+      <th>Mennyiség</th>
+      <th>Összesen</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let item of products">
+      <td>{{item.title}}</td>
+      <td><img style="width: 100px" [src]="'assets/imgs-book/' + item.img + '.JPG'" alt="borítókép"></td>
+      <td>{{item.id}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.quantity}}</td>
+      <td>{{item.total}}</td>
+      <td>
+        <button (click)="removeItem(item)" mat-raised-button color="warn"><mat-icon>delete</mat-icon></button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"></td>
+      <td><button (click)="emptyCart()" mat-raised-button color="warn">Ürítés</button> </td>
+      <td><button mat-raised-button color="primary" routerLink="/products">Böngészés</button></td>
+      <td><button class="pay">Fizet</button></td>
+      <td><strong>Össesen: {{grandTotal}} Ft</strong></td>
+    </tr>
+  </table>
+</ng-container>
+
+<ng-container class="cart-empty" *ngIf="products.length==0">
+
+</ng-container>

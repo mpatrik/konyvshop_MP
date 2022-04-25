@@ -3,6 +3,7 @@ import {MatSidenav} from "@angular/material/sidenav";
 import {AuthService} from "./shared/services/auth.service";
 import {Book} from "./shared/models/Book";
 import {books} from "./shared/constants/books-db";
+import {CartService} from "./shared/services/cart.service";
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,9 @@ import {books} from "./shared/constants/books-db";
 export class AppComponent implements OnInit{
   title = 'konyvshop';
   loggedInUser?: firebase.default.User | null;
+  public totalItem: number = 0;
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private cartService: CartService) {
   }
 
   ngOnInit() {
@@ -24,6 +26,9 @@ export class AppComponent implements OnInit{
       console.error(error);
       localStorage.setItem('user', JSON.stringify('null'));
     });
+    this.cartService.getProducts().subscribe(res => {
+      this.totalItem = res.length;
+    })
   }
 
   onToggleSidenav(sidenav: MatSidenav) {

@@ -13,10 +13,10 @@
     </td>
     <td class="tocart-button">
       <span fxHide.sm fxHide.xs>
-      <button (click)="putToCart(row)">kosárba</button>
+      <button (click)="addtoCart(row)">kosárba</button>
       </span>
       <span fxHide.gt-sm>
-      <button (click)="putToCart(row)"><mat-icon>shopping_cart</mat-icon></button>
+      <button (click)="addtoCart(row)"><mat-icon>shopping_cart</mat-icon></button>
       </span>
       <br>
       <span class="price">{{row['price']}} Ft</span>

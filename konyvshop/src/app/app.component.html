@@ -18,7 +18,10 @@
           <li *ngIf="!(loggedInUser)"><a routerLink="signup">regisztráció</a></li>
           <li *ngIf="loggedInUser"><a routerLink="profile">profil</a></li>
           <li *ngIf="loggedInUser"><a routerLink="login" (click)="logout()">kilépés</a></li>
-          <li class="cart" routerLink="cart"><mat-icon class="cart-menu-icon">shopping_cart</mat-icon></li>
+          <li class="cart" routerLink="cart">
+            <mat-icon class="cart-menu-icon">shopping_cart</mat-icon>
+            <div class="cart-quantity">{{totalItem}}</div>
+          </li>
         </ul>
       </nav>
     </mat-toolbar>

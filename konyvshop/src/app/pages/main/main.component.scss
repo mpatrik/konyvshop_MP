@@ -1,1 +1,72 @@
+.main-container {
+  height: 100vh;
+}
 
+.logo {
+  font-size: 50px;
+  font-weight: 500;
+}
+.logo span:first-child {
+  color: var(--orange);
+}
+
+.main {
+  width: 70%;
+  padding-top: 25vh;
+  padding-left: 10vh;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+div {
+  font-size: 30px;
+  padding: 5px;
+}
+
+.last-div {
+  padding-top: 20px;
+}
+
+img {
+  height: 50%;
+  position: relative;
+  bottom: 30vh;
+  left: 100vh;
+}
+
+button {
+  margin-top: 20px;
+  box-shadow: 0 1px 10px 0 #666;
+}
+
+button:hover {
+  background-color: #e3661f;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0 5px 10px 0 #666;
+}
+
+
+@media screen and (max-width: 959px) {
+  .main {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  div {
+    font-size: 20px;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+}
