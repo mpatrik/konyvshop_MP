@@ -1,11 +1,11 @@
 <table class="products">
   <tr *ngFor="let row of booksArray">
-    <!--<app-book *ngIf="false" [bookObject]="row"></app-book>-->
+    <!--<app-book [bookObject]="row"></app-book>-->
     <td class="products-img">
-        <img [src]="'assets/imgs-book/' + row['img'] + '.JPG'" alt="image" [routerLink]="'/products/book'">
+        <img [src]="'assets/imgs-book/' + row['img'] + '.JPG'" alt="image">
     </td>
     <td class="products-desc">
-      <div class="title" [routerLink]="'/products/book'">{{row['title']}}</div>
+      <div class="title">{{row['title']}}</div>
       <div class="author">{{row['author']}}</div>
       <div class="publisher">{{row['publisher']}}, {{row['year']}}</div>
       <div class="genre">{{row['genre']}}</div>

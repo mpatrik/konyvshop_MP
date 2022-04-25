@@ -46,7 +46,7 @@ export class SignupComponent implements OnInit {
         }).catch(error => {
           console.error(error);
         });
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/main');
       }).catch(error => {
         console.error(error);
       });

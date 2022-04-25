@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { books } from '../../shared/constants/books-db';
 import {Book} from "../../shared/models/Book";
+import {ProductsService} from "../../shared/services/products.service";
 
 @Component({
   selector: 'app-products',
@@ -8,9 +9,9 @@ import {Book} from "../../shared/models/Book";
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  booksArray : Array<Book>;
+  booksArray: Array<Book>;
 
-  constructor() {
+  constructor(private productService: ProductsService) {
     this.booksArray = books;
   }
 

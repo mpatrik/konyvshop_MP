@@ -19,8 +19,11 @@ export class UserService {
 
   }
 
-  update() {
+  getById(id: string) {
+    return this.afs.collection<User>(this.collectionName).doc(id).valueChanges();
+  }
 
+  update() {
   }
 
   delete() {
