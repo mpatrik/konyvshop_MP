@@ -1,0 +1,127 @@
+// EMPTY PAGE
+.cart-empty {
+  height: 89.5vh;
+}
+
+.empty-container, table {
+  background-color: #eeeeee;
+  width: 70%;
+  height: 80%;
+  margin: 1vh auto 0 auto;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+}
+
+.empty-img, .empty-button {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.empty-button button {
+  position: relative;
+  margin-top: 10px;
+  font-size: 20px;
+  box-shadow: 0 1px 10px 0 #666;
+}
+
+.empty-button button:hover {
+  background-color: #e3661f;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0 5px 10px 0 #666;
+}
+
+.empty-img img {
+  height: 400px;
+  position: relative;
+  margin-top: 7%;
+}
+// EMPTY PAGE END
+
+.cart-list {
+  min-height: 88.9vh;
+}
+
+.cart-list img {
+  width: 100px;
+}
+
+td, td div {
+  text-align: center;
+}
+
+
+.pay {
+  background-color: green;
+  color: white;
+}
+
+td button {
+  box-shadow: 0 1px 10px 0 #666;
+  transition: all 0.3s ease 0s;
+  margin: 10px 0;
+}
+
+td button:hover {
+  box-shadow: 0 5px 10px 0 #666;
+}
+
+
+.shop-more:hover {
+  background-color: #e3661f;
+}
+
+.emptycart:hover, .delete:hover {
+  background-color: rgba(244, 67, 54, 0.87);
+}
+
+.pay:hover {
+  background-color: rgba(0, 128, 0, 0.91);
+}
+
+
+@media screen and (max-width: 959px) {
+  .empty-container, table {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .empty-button button {
+    font-size: 16px;
+    //left: 38%
+  }
+
+  .empty-img img {
+    height: 200px;
+    margin-top: 15%;
+  }
+
+  .delete-small {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 100%;
+    position: relative;
+    left: -10px;
+    background-color: #f44336;
+    border: none;
+  }
+
+  .delete-small mat-icon {
+    font-size: 16px;
+    color: white;
+    position: relative;
+    top: 4px;
+  }
+
+
+}
+

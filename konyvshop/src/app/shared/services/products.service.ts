@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 import {Book} from "../models/Book";
 import {AngularFirestore} from "@angular/fire/compat/firestore";
 import {AngularFireStorage} from "@angular/fire/compat/storage";
@@ -10,6 +10,7 @@ import {AngularFireStorage} from "@angular/fire/compat/storage";
 export class ProductsService {
 
   collectionName = 'Books';
+  public search = new BehaviorSubject<string>("");
 
   constructor(private afs: AngularFirestore, private storage: AngularFireStorage) { }
 

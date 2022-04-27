@@ -6,11 +6,13 @@ import {ProductsComponent} from "./products.component";
 import {ExtendedModule, FlexModule} from "@angular/flex-layout";
 import {MatIconModule} from "@angular/material/icon";
 import {BookModule} from "./book/book.module";
+import {SearchFilterPipe} from "../../shared/pipes/search-filter.pipe";
 
 
 @NgModule({
   declarations: [
-    ProductsComponent
+    ProductsComponent,
+    SearchFilterPipe
   ],
     imports: [
         CommonModule,

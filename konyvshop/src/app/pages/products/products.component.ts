@@ -11,6 +11,7 @@ import {CartService} from "../../shared/services/cart.service";
 })
 export class ProductsComponent implements OnInit {
   booksArray: Array<Book>;
+  searchKey: string = "";
 
   constructor(private productService: ProductsService, private cartService: CartService) {
     this.booksArray = books;
@@ -18,9 +19,14 @@ export class ProductsComponent implements OnInit {
 
 
 
+
   ngOnInit(): void {
     this.booksArray.forEach((a: any) => {
       Object.assign(a,{quantity:1,total:a.price});
+    });
+
+    this.productService.search.subscribe((val: any) => {
+      this.searchKey = val;
     });
   }
 

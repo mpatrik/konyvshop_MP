@@ -1,26 +1,27 @@
-<table class="products">
-  <tr *ngFor="let row of booksArray">
-    <!--<app-book [bookObject]="row"></app-book>-->
-    <td class="products-img">
-        <img [src]="'assets/imgs-book/' + row['img'] + '.JPG'" alt="image">
-    </td>
-    <td class="products-desc">
-      <div class="title">{{row['title']}}</div>
-      <div class="author">{{row['author']}}</div>
-      <div class="publisher">{{row['publisher']}}, {{row['year']}}</div>
-      <div class="genre">{{row['genre']}}</div>
-      <div class="description" fxHide.xs>{{row['description'].substr(0,250)}}...</div>
-    </td>
-    <td class="tocart-button">
-      <span fxHide.sm fxHide.xs>
-      <button (click)="addtoCart(row)">kosárba</button>
-      </span>
-      <span fxHide.gt-sm>
-      <button (click)="addtoCart(row)"><mat-icon>shopping_cart</mat-icon></button>
-      </span>
-      <br>
-      <span class="price">{{row['price']}} Ft</span>
-    </td>
-  </tr>
-</table>
-
+<div class="products-container">
+  <table class="products">
+    <tr *ngFor="let row of booksArray | searchFilter:searchKey:'title'">
+      <!--<app-book [bookObject]="row"></app-book>-->
+      <td class="products-img">
+          <img [src]="'assets/imgs-book/' + row['img'] + '.JPG'" alt="image">
+      </td>
+      <td class="products-desc">
+        <div class="title">{{row['title']}}</div>
+        <div class="author">{{row['author']}}</div>
+        <div class="publisher">{{row['publisher']}}, {{row['year']}}</div>
+        <div class="genre">{{row['genre']}}</div>
+        <div class="description" fxHide.xs>{{row['description'].substr(0,250)}}...</div>
+      </td>
+      <td class="tocart-button">
+        <span fxHide.sm fxHide.xs>
+        <button (click)="addtoCart(row)">kosárba</button>
+        </span>
+        <span fxHide.gt-sm>
+        <button (click)="addtoCart(row)"><mat-icon>shopping_cart</mat-icon></button>
+        </span>
+        <br>
+        <span class="price">{{row['price']}} Ft</span>
+      </td>
+    </tr>
+  </table>
+</div>

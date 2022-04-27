@@ -12,7 +12,8 @@ export class ProfileComponent implements OnInit {
   user?: User;
 
 
-  constructor(private userService: UserService) {  }
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit() {
     const user = JSON.parse(localStorage.getItem('user') as string) as firebase.default.User;

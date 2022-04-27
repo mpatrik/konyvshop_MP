@@ -10,6 +10,10 @@
         </button>
       </div>
       <div class="logo" routerLink="main"><span>könyv</span><span>shop</span></div>
+      <div class="searchbar">
+        <input type="text" placeholder="keresés..." [(ngModel)]="searchTerm" (keyup)="search($event)">
+        <mat-icon>search</mat-icon>
+      </div>
       <nav fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.sm fxHide.xs>
         <ul fxLayout fxLayoutGap="20px" class="menu">
           <li><a routerLink="main">kezdőlap</a></li>
@@ -19,8 +23,8 @@
           <li *ngIf="loggedInUser"><a routerLink="profile">profil</a></li>
           <li *ngIf="loggedInUser"><a routerLink="login" (click)="logout()">kilépés</a></li>
           <li class="cart" routerLink="cart">
-            <mat-icon class="cart-menu-icon">shopping_cart</mat-icon>
-            <div class="cart-quantity">{{totalItem}}</div>
+            <mat-icon class="cart-menu-icon">shopping_cart<div class="cart-quantity" *ngIf="totalItem">{{totalItem}}</div></mat-icon>
+
           </li>
         </ul>
       </nav>

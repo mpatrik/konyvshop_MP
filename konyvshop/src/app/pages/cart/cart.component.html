@@ -1,35 +1,49 @@
-<ng-container class="cart-list" *ngIf="products.length">
+<div class="cart-list" *ngIf="products.length">
   <table>
     <tr>
-      <th>Cím</th>
       <th>Borítókép</th>
-      <th>Adatok</th>
+      <th>Cím</th>
+      <th fxHide.sm fxHide.xs>Adatok</th>
       <th>Ár</th>
       <th>Mennyiség</th>
-      <th>Összesen</th>
+      <th fxHide.sm fxHide.xs>Összesen</th>
       <th></th>
     </tr>
     <tr *ngFor="let item of products">
+      <td><img [src]="'assets/imgs-book/' + item.img + '.JPG'" alt="borítókép"></td>
       <td>{{item.title}}</td>
-      <td><img style="width: 100px" [src]="'assets/imgs-book/' + item.img + '.JPG'" alt="borítókép"></td>
-      <td>{{item.id}}</td>
+      <td fxHide.sm fxHide.xs>
+        <div>ISBN: {{item.id}}</div>
+        <div>{{item.author}}</div>
+        <div>{{item.publisher}}, {{item.year}}</div>
+        <div>{{item.genre}}</div>
+        <div>{{item.pages}} oldal</div>
+      </td>
       <td>{{item.price}}</td>
       <td>{{item.quantity}}</td>
-      <td>{{item.total}}</td>
+      <td fxHide.sm fxHide.xs>{{item.total}}</td>
       <td>
-        <button (click)="removeItem(item)" mat-raised-button color="warn"><mat-icon>delete</mat-icon></button>
+        <button (click)="removeItem(item)" mat-raised-button color="warn" class="delete" fxHide.sm fxHide.xs><mat-icon>delete</mat-icon></button>
+        <button (click)="removeItem(item)" class="delete-small" fxHide.gt-sm><mat-icon>delete</mat-icon></button>
       </td>
     </tr>
     <tr>
-      <td colspan="3"></td>
-      <td><button (click)="emptyCart()" mat-raised-button color="warn">Ürítés</button> </td>
-      <td><button mat-raised-button color="primary" routerLink="/products">Böngészés</button></td>
-      <td><button class="pay">Fizet</button></td>
+      <td colspan="3" fxHide.sm fxHide.xs></td>
+      <td><button (click)="emptyCart()" mat-raised-button class="emptycart" color="warn">Kiürítés</button> </td>
+      <td><button mat-raised-button class="shop-more" color="primary" routerLink="/products">Böngészés</button></td>
+      <td><button mat-raised-button class="pay">Fizet</button></td>
       <td><strong>Össesen: {{grandTotal}} Ft</strong></td>
     </tr>
   </table>
-</ng-container>
+</div>
 
-<ng-container class="cart-empty" *ngIf="products.length==0">
 
-</ng-container>
+
+
+<div class="cart-empty" *ngIf="products.length==0">
+  <div class="empty-container">
+    <div class="empty-img"><img src="assets/empty-cart.png" alt="cart"></div>
+    <h1>Üres a kosarad.</h1>
+    <div class="empty-button"><button mat-raised-button color="primary" routerLink="/products">Vásárlás</button></div>
+  </div>
+</div>

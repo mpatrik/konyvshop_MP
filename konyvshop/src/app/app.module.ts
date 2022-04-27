@@ -22,15 +22,16 @@ import {AngularFireModule} from "@angular/fire/compat";
 import { ProfileComponent } from './pages/profile/profile.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import {MatCardModule} from "@angular/material/card";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    FooterComponent,
-    ProfileComponent,
-    NotFoundComponent,
-  ],
+    declarations: [
+        AppComponent,
+        MenuComponent,
+        FooterComponent,
+        ProfileComponent,
+        NotFoundComponent,
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
@@ -47,9 +48,12 @@ import {MatCardModule} from "@angular/material/card";
         provideFirestore(() => getFirestore()),
         provideStorage(() => getStorage()),
         MatCardModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
-  providers: [],
-  bootstrap: [AppComponent]
+    providers: [],
+  exports: [],
+    bootstrap: [AppComponent]
 })
 
 export class AppModule{ }

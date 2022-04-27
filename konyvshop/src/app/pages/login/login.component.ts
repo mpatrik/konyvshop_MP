@@ -4,6 +4,8 @@ import {Router} from "@angular/router";
 import {FakeLoadingService} from "../../shared/services/fake-loading.service";
 import {Observable, Subscription} from "rxjs";
 import {AuthService} from "../../shared/services/auth.service";
+import {User} from "../../shared/models/User";
+import {UserService} from "../../shared/services/user.service";
 
 @Component({
   selector: 'app-login',
@@ -20,7 +22,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   loading: boolean = false;
   private loadingObservation?: Observable<boolean>;
 
-  constructor(private router: Router, private loadingService: FakeLoadingService, private authService: AuthService) { }
+  constructor(private router: Router, private loadingService: FakeLoadingService, private authService: AuthService, private userService: UserService) { }
 
   ngOnInit(): void {
   }
