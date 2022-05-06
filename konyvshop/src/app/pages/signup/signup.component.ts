@@ -23,13 +23,22 @@ export class SignupComponent implements OnInit {
     })
   });
 
+  emailFormat: boolean = true;
+  passMatch: boolean = true;
+  missingValues: boolean = true;
+
   constructor(private location: Location, private authService: AuthService, private router: Router, private userService: UserService) { }
+
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    if(this.signUpForm.get('password')?.value===this.signUpForm.get('rePassword')?.value) {
+    this.emailFormat = true;
+    this.passMatch = true;
+    this.missingValues = true;
+    if(this.signUpForm.get('password')?.value===this.signUpForm.get('rePassword')?.value && this.signUpForm.get('email')?.value.split('@').length===2
+      && this.signUpForm.get('name.firstname')?.value && this.signUpForm.get('name.lastname')?.value) {
       this.authService.signup(this.signUpForm.get('email')?.value, this.signUpForm.get('password')?.value).then(cred => {
         console.log(cred);
         const user: User = {
@@ -50,8 +59,15 @@ export class SignupComponent implements OnInit {
       }).catch(error => {
         console.error(error);
       });
+    } else if(this.signUpForm.get('email')?.value.split('@').length!==2) {
+        console.error('Email badly formatted.');
+        this.emailFormat = false;
+    } else if(this.signUpForm.get('password')?.value!==this.signUpForm.get('rePassword')?.value) {
+        console.error('Password and repassword unmatched.');
+        this.passMatch = false;
     } else {
-      console.error('Password and repassword unmatched.');
+        console.error('Missing values.');
+        this.missingValues = false;
     }
   }
 

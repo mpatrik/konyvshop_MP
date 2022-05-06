@@ -29,10 +29,6 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'products/book',
-    loadChildren: () => import('./pages/products/book/book.module').then(m => m.BookModule)
-  },
-  {
     path: 'not-found',
     loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule)
   },

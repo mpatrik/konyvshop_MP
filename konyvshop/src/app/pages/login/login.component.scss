@@ -45,6 +45,11 @@ h1 {
   margin-bottom: 32px;
 }
 
+.error {
+  font-size: 20px;
+  color: red;
+}
+
 @media screen and (max-width: 599px) {
   .login-container div {
     width: 100%;
@@ -53,6 +58,12 @@ h1 {
 
   mat-form-field {
     width: 70%;
+  }
+}
+
+@media screen and (max-height: 599px) {
+  .login-container div {
+    height: 80%;
   }
 }
 

@@ -43,7 +43,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         FlexLayoutModule,
         MatListModule,
         AngularFireModule.initializeApp(environment.firebase),
-        //provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideAuth(() => getAuth()),
         provideFirestore(() => getFirestore()),
         provideStorage(() => getStorage()),

@@ -12,6 +12,7 @@ import {CartService} from "../../shared/services/cart.service";
 export class ProductsComponent implements OnInit {
   booksArray: Array<Book>;
   searchKey: string = "";
+  searchTerm: string = '';
 
   constructor(private productService: ProductsService, private cartService: CartService) {
     this.booksArray = books;
@@ -33,5 +34,10 @@ export class ProductsComponent implements OnInit {
 
   addtoCart(item: Book) {
     this.cartService.addtoCart(item);
+  }
+
+  search(event: any) {
+    this.searchTerm = (event.target as HTMLInputElement).value;
+    this.productService.search.next(this.searchTerm);
   }
 }

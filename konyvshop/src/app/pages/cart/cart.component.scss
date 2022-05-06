@@ -1,6 +1,6 @@
 // EMPTY PAGE
 .cart-empty {
-  height: 89.5vh;
+  height: 100vh;
 }
 
 .empty-container, table {
@@ -41,6 +41,8 @@ h1 {
   position: relative;
   margin-top: 7%;
 }
+
+
 // EMPTY PAGE END
 
 .cart-list {
@@ -96,7 +98,6 @@ td button:hover {
 
   .empty-button button {
     font-size: 16px;
-    //left: 38%
   }
 
   .empty-img img {
@@ -121,7 +122,24 @@ td button:hover {
     position: relative;
     top: 4px;
   }
-
-
 }
 
+@media screen and (max-height: 620px) {
+  .empty-container {
+    height: 100%;
+  }
+
+  .empty-img img {
+    margin-top: 10px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 22.5px;
+  }
+
+  .empty-button button {
+    font-size: 12px;
+  }
+
+}

@@ -4,7 +4,7 @@
 
 .products {
   width: 70%;
-  margin: 100px auto;
+  margin: 0 auto 100px auto;
   border-collapse: collapse;
 }
 
@@ -28,9 +28,13 @@
   font-weight: bold;
 }
 
-.author, .publisher, .genre {
+.author, .publisher, .genre, .pages-id {
   font-style: italic;
   font-size: 14px;
+}
+
+.pages-id, .description {
+  margin-top: 6px;
 }
 
 .genre::first-letter {
@@ -69,6 +73,40 @@ mat-icon {
   top: 4px;
 }
 
+.searchbar {
+  width: 70%;
+  margin: 100px auto 0 auto;
+  background-color: #eeeeee;
+}
+
+.searchbar input {
+  width: 250px;
+  height: 32px;
+  border: 2px solid var(--orange);
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px 0 10px 10px;
+}
+
+.searchbar mat-icon {
+  position: relative;
+  left: -30px;
+  top: 8px;
+}
+
+.searchbar mat-icon {
+  cursor: pointer;
+}
+
+.searchbar mat-icon:hover {
+  color: var(--orange);
+}
+
+.searchbar input:focus {
+  outline: none;
+  border: 3px solid var(--orange)
+}
+
+
 // HOVER EFFECTS
 
 .tocart-button button:hover {
@@ -84,7 +122,7 @@ mat-icon {
 // HOVER EFFECTS END
 
 @media screen and (max-width: 959px) {
-  .products {
+  .products, .searchbar {
     width: 100%;
     margin-right: 0;
   }
@@ -102,6 +140,10 @@ mat-icon {
 
   .price {
     left: 40px
+  }
+
+  .products tr:hover {
+    background-color: #eeeeee;
   }
 }
 

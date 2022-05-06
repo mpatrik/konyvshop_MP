@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
   title = 'konyvshop';
   loggedInUser?: firebase.default.User | null;
   public totalItem: number = 0;
-  searchTerm: string = '';
+  //searchTerm: string = '';
 
   constructor(private authService: AuthService, private cartService: CartService, private productsService: ProductsService) {
   }
@@ -51,8 +51,8 @@ export class AppComponent implements OnInit{
     });
   }
 
-  search(event: any) {
+  /*search(event: any) {
     this.searchTerm = (event.target as HTMLInputElement).value;
     this.productsService.search.next(this.searchTerm);
-  }
+  }*/
 }

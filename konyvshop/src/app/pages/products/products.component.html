@@ -1,7 +1,10 @@
 <div class="products-container">
+  <div class="searchbar">
+    <input type="text" placeholder="keresés..." (keyup)="search($event)">
+    <mat-icon>search</mat-icon>
+  </div>
   <table class="products">
     <tr *ngFor="let row of booksArray | searchFilter:searchKey:'title'">
-      <!--<app-book [bookObject]="row"></app-book>-->
       <td class="products-img">
           <img [src]="'assets/imgs-book/' + row['img'] + '.JPG'" alt="image">
       </td>
@@ -10,7 +13,8 @@
         <div class="author">{{row['author']}}</div>
         <div class="publisher">{{row['publisher']}}, {{row['year']}}</div>
         <div class="genre">{{row['genre']}}</div>
-        <div class="description" fxHide.xs>{{row['description'].substr(0,250)}}...</div>
+        <div class="description" fxHide.xs>{{row['description'].substr(0,350)}}...</div>
+        <div class="pages-id">{{row['pages']}} oldal - ISBN: {{row['id']}}</div>
       </td>
       <td class="tocart-button">
         <span fxHide.sm fxHide.xs>

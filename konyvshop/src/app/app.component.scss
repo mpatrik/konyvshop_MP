@@ -1,6 +1,8 @@
 // NAVBAR
 mat-toolbar {
   box-shadow: 0 3px 10px 0 #666;
+  position: fixed;
+  z-index: 999999;
 }
 
 nav {
@@ -67,36 +69,6 @@ nav {
 }
 
 
-.searchbar {
-  margin-left: 10%;
-}
-
-.searchbar input {
-  width: 250px;
-  height: 32px;
-  border: 2px solid var(--orange);
-  border-radius: 10px 25px 25px 10px;
-}
-
-.searchbar mat-icon {
-  position: relative;
-  left: -10%;
-  top: 7px;
-}
-
-.searchbar mat-icon {
-  cursor: pointer;
-}
-
-.searchbar mat-icon:hover {
-  color: var(--orange);
-}
-
-.searchbar input:focus {
-  outline: none;
-  border: 3px solid var(--orange)
-}
-
 // NAVBAR END
 
 mat-sidenav-content, mat-sidenav-container {
@@ -107,17 +79,8 @@ mat-sidenav {
   width: 250px;
 }
 
-@media screen and (max-width: 500px){
-  .searchbar {
-    margin-left: 4%;
-  }
-
-  .searchbar input {
-    width: 150px;
-    height: 32px;
-  }
-
-  .searchbar mat-icon {
-    left: -16%;
+@media screen and (max-width: 959px) {
+  .cart {
+    margin-left: auto;
   }
 }

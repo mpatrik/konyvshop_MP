@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   loadingSubscription?: Subscription;
 
   loading: boolean = false;
-  private loadingObservation?: Observable<boolean>;
+  loginError: boolean = false;
 
   constructor(private router: Router, private loadingService: FakeLoadingService, private authService: AuthService, private userService: UserService) { }
 
@@ -29,39 +29,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   async login() {
     this.loading = true;
-    // Promise
-    /*this.loadingService.loadingWithPromise(this.email.value, this.password.value).then((_: boolean) => {
-      this.router.navigateByUrl('/main');
-    }).catch(error => {
-      console.error(error, 'Helytelen email vagy jelszó!');
-    }).finally(() => {
-      console.log('This is executed finally.');
-    });*/
-
-    // async-await
-    /*try {
-      const _ = await this.loadingService.loadingWithPromise(this.email.value, this.password.value);
-      this.router.navigateByUrl('/main');
-    } catch(error) {
-      console.error(error, 'Helytelen email vagy jelszó!');
-    }
-    console.log('This is executed finally.');
-    */
-
-    // Observable
-    /*this.loadingObservation = this.loadingService.loadingWithObservable(this.email.value, this.password.value);
-    this.loadingSubscription = this.loadingObservation
-      .subscribe(
-        { next: (data: boolean) => {
-          this.router.navigateByUrl('/main');
-          }, error: (error) => {
-            console.error(error);
-            this.loading = false;
-          }, complete: () => {
-            console.log('finally');
-            this.loading = false;
-          }
-    });*/
+    this.loginError = false;
 
     this.authService.login(this.email.value, this.password.value).then(cred => {
       this.router.navigateByUrl('/main');
@@ -69,6 +37,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     }).catch(error => {
       console.error(error);
       this.loading = false;
+      this.loginError = true;
     });
   }
 
