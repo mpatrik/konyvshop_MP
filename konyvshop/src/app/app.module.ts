@@ -19,7 +19,6 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import {AngularFireModule} from "@angular/fire/compat";
-import { ProfileComponent } from './pages/profile/profile.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import {MatCardModule} from "@angular/material/card";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -29,7 +28,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         AppComponent,
         MenuComponent,
         FooterComponent,
-        ProfileComponent,
         NotFoundComponent,
     ],
     imports: [

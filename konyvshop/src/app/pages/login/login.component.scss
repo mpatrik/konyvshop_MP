@@ -9,8 +9,7 @@
   text-align: center;
   align-items: center;
   background-color: rgba(238,238,238, 0.8);
-  margin: auto auto;
-  margin-top: 10%;
+  margin: 10% auto auto;
   width: 50%;
   height: 50%;
   box-shadow: 0 0 10px 3px #222;
@@ -54,6 +53,7 @@ h1 {
   .login-container div {
     width: 100%;
     height: 60%;
+    margin-top: 20%;
   }
 
   mat-form-field {

@@ -19,10 +19,6 @@
     <mat-icon>app_registration</mat-icon>
     <span>regisztráció</span>
   </a>
-  <a mat-list-item routerLink="profile" (click)="close()" *ngIf="loggedInUser">
-    <mat-icon>person</mat-icon>
-    <span>profil</span>
-  </a>
   <a mat-list-item routerLink="login" (click)="close(true)" *ngIf="loggedInUser">
     <mat-icon>logout</mat-icon>
     <span>kilépés</span>

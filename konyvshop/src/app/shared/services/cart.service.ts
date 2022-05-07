@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs";
+import {Order} from "../models/Order";
+import {AngularFirestore} from "@angular/fire/compat/firestore";
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +10,9 @@ export class CartService {
 
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
+  collectionName = 'Orders';
 
-  constructor() { }
+  constructor(private afs: AngularFirestore) { }
 
   getProducts(){
     return this.productList.asObservable();
@@ -47,5 +50,9 @@ export class CartService {
   removeAllCart() {
     this.cartItemList = [];
     this.productList.next(this.cartItemList);
+  }
+
+  createOrder(order: Order) {
+    return this.afs.collection<Order>(this.collectionName).doc(String(order.id)).set(order);
   }
 }
