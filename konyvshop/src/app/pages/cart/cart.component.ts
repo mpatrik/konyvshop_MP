@@ -24,6 +24,7 @@ export class CartComponent implements OnInit {
     }),
     address: new FormGroup({
       postCode: new FormControl(),
+      city: new FormControl(),
       street: new FormControl(),
       homeNumber: new FormControl()
     }),
@@ -56,7 +57,7 @@ export class CartComponent implements OnInit {
     this.emailFormat = true;
     this.missingValues = true;
     if(this.orderForm.get('email')?.value.split('@').length===2 && this.orderForm.get('payType')?.value && this.orderForm.get('name.firstname')?.value && this.orderForm.get('name.lastname')?.value &&
-      this.orderForm.get('address.postCode')?.value && this.orderForm.get('address.street')?.value && this.orderForm.get('address.homeNumber')?.value) {
+      this.orderForm.get('address.postCode')?.value && this.orderForm.get('address.city')?.value && this.orderForm.get('address.street')?.value && this.orderForm.get('address.homeNumber')?.value) {
       const order: Order = {
         id: CartComponent.orderId,
         payType: this.orderForm.get('payType')?.value,
@@ -67,6 +68,7 @@ export class CartComponent implements OnInit {
         },
         address: {
           postCode: this.orderForm.get('address.postCode')?.value,
+          city: this.orderForm.get('address.city')?.value,
           street: this.orderForm.get('address.street')?.value,
           homeNumber: this.orderForm.get('address.homeNumber')?.value
         },

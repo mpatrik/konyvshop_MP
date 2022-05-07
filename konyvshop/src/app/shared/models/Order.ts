@@ -8,6 +8,7 @@ export interface Order {
   },
   address: {
     postCode: string;
+    city: string;
     street: string;
     homeNumber: string;
   },
