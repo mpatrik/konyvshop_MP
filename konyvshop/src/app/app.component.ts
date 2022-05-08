@@ -1,10 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatSidenav} from "@angular/material/sidenav";
 import {AuthService} from "./shared/services/auth.service";
-import {Book} from "./shared/models/Book";
-import {books} from "./shared/constants/books-db";
 import {CartService} from "./shared/services/cart.service";
-import {ProductsService} from "./shared/services/products.service";
 
 @Component({
   selector: 'app-root',
@@ -15,9 +12,8 @@ export class AppComponent implements OnInit{
   title = 'konyvshop';
   loggedInUser?: firebase.default.User | null;
   public totalItem: number = 0;
-  //searchTerm: string = '';
 
-  constructor(private authService: AuthService, private cartService: CartService, private productsService: ProductsService) {
+  constructor(private authService: AuthService, private cartService: CartService) {
   }
 
   ngOnInit() {
@@ -50,9 +46,4 @@ export class AppComponent implements OnInit{
       console.error(error);
     });
   }
-
-  /*search(event: any) {
-    this.searchTerm = (event.target as HTMLInputElement).value;
-    this.productsService.search.next(this.searchTerm);
-  }*/
 }

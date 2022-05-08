@@ -170,19 +170,145 @@ export const books = [
       '\n' +
       '"Inkább fantasy ez, nem horror. Bizonyos részei gyilkosak, embereket széttépnek, lelőnek és szörnyű módokon meggyilkolnak, de nincs benne kísértet, sem ijesztő bohóc." (Owen King)##'
   },
+  {
+    id : '9789635045860',
+    title : 'Később',
+    author : 'Stephen King',
+    publisher : 'Európa Könyvkiadó',
+    year : '2022',
+    pages : '306',
+    price : '3400',
+    genre: 'krimi',
+    img : 'kesobb',
+    description : 'Az egyedülálló anya gyermeke, Jamie Conklin csak hétköznapi gyerekkorra vágyik. Jamie azonban nem mindennapi srác. Látja, amit más nem láthat, és megtudhatja azt, amit más nem. Anyja arra buzdítja a természetfeletti erővel született fiát, hogy tartsa titokban a képességét. De amikor a New York-i rendőrség egyik problémás nyomozója bevonja Jamie-t egy sorozatgyilkos üldözésébe, aki a síron túlról is robbantással fenyegetőzik, a fiú szembesül azzal, milyen súlyos árat is kell fizetnie, és kénytelen szembeszállni a gonosz minden formájával.\n' +
+      'A Később, akárcsak a Joyland és A coloradói kölyök, a Hard Case Crime sorozat bűnügyi történeteiben jelent meg, és jól bizonyítja, hogy King a kisprózának is igazi nagymestere. A kisregény megható felnövéstörténet, lebilincselő krimi és kísértethistória egyszerre, félelmetes és izgalmas mese az elveszett ártatlanságról és a megpróbáltatásokról, mikor jó és rossz között kell választanunk.'
+  },
+  {
+    id : '9789636891343',
+    title : '101 kutyatrükk - Gyakorlatok lépésről lépésre az engedelmesség, a készségfejlesztés és az együttműködés jegyében',
+    author : 'Chalcy, Kyra Sundance',
+    publisher : 'Gabo Kiadó',
+    year : '2008',
+    pages : '208',
+    price : '3817',
+    genre: 'kutya',
+    img : '101_kutyatrukk',
+    description : 'Ő a barátod, a társad, a testőröd, a kutyád. Te pedig az élete, a szerelme, a falkavezére vagy. A tiéd lesz és az is marad, hűséges lényként szívének utolsó dobbanásáig. Tartozol neki annyival, hogy méltónak találtass feltétlen szeretetére.\n' +
+      '\n' +
+      'A 101 kutyatrükk kitűnő lehetőség arra, hogy közelebb kerülj a kutyádhoz, segíts neki beilleszkedni a családba, folyamatosan fejleszd szellemi és fizikai képességeit.\n' +
+      '\n' +
+      '- trükkök gazdag tárháza\n' +
+      '- instrukciók lépésről lépésre\n' +
+      '- bonyolultabb trükkök részekre bontása\n' +
+      '\n' +
+      'Valamennyi lépést fényképek illusztrálnak!'
+  },
+  {
+    id : '9789634869849',
+    title : 'Asterix 33. - Fejére szakad az ég',
+    author : 'Albert Uderzo, René Goscinny',
+    publisher : 'Móra Könyvkiadó',
+    year : '2022',
+    pages : '48',
+    price : '2550',
+    genre: 'képregény',
+    img : 'asterix_33',
+    description : 'Szokásos vadászatukra indulva Asterix, Obelix és Ideafix döbbenten tapasztalják, hogy az erdőben minden állat megdermedt, és amikor visszatérnek a faluba, látják, hogy Panoramix kivételével minden barátjukkal ugyanez történt. Miután utánajárnak a jelenségnek, kiderül, hogy összefüggésben van a varázsitallal, amelynek már a teljes univerzumban híre ment, és felkeltette furcsa űrbéli lények érdeklődését. A Tadsylwein bolygóról érkezett Toon és népének esküdt ellenségei, a Nagmák képviselője is meg akarja szerezni a törhetetlen gallok titkos fegyverét...'
+  },
+  {
+    id : '9789634992936',
+    title : 'Képzelt barát',
+    author : 'Stephen Chbosky',
+    publisher : 'Maxim Könyvkiadó',
+    year : '2022',
+    pages : '704',
+    price : '4250',
+    genre: 'thriller, horror',
+    img : 'kepzelt_barat',
+    description : 'Christopher hét éves. Christopher az új fi ú a kisvárosban. Christophernek van egy képzelt barátja.\n' +
+      'Legyőzhetjük a félelmünket, vagy hagyhatjuk, hogy az győzzön le minket. Kate Reese egyedülálló anya, aki menekülni próbál bántalmazó kapcsolatából, mert jobb életet akar magának és a fi ának, Christophernek. Az éjszakai száguldás után a pennsylvaniai városkában, Mill Grove-ban kötnek ki, mely olyan messze esik a járt utaktól, amennyire ez csak lehetséges. A közösség zárt, a városba egyetlen főút vezet be, és ugyanaz ki. Először úgy tűnik, hogy Mill Grove tökéletes hely, ahol végre megállapodhatnak. Aztán Christopher eltűnik, és senki sem találja. Hat hosszú nap múlva kerül elő az erdőből a város peremén: sértetlen, de valahogy mégis más lett. Attól fogva egy hang beszél hozzá a fejében, amelyet csak ő hallhat, és küldetése van, amelyet csak ő teljesíthet: karácsonyra fel kell építenie az erdőben egy lombházat, különben az anyja és mindenki más a városban örökre megváltozik.\n' +
+      'Stephen Chbosky Egy különc srác feljegyzései című könyve húsz éve jelent meg, és a határtalanság érzését nyújtotta az olvasóknak. Most egy hosszú évek óta érlelt horrorral tért vissza, melynek kozmikus méretei és érzelmi gazdagsága átalakítják a műfaj meghatározását.'
+  },
+  {
+    id : '9789634795858',
+    title : 'Gyilkosság az Orient Expresszen',
+    author : ' gatha Christie',
+    publisher : 'Helikon Kiadó',
+    year : '2022',
+    pages : '292',
+    price : '2550',
+    genre: 'krimi',
+    img : 'gyilkossag_az_orient_expresszen',
+    description : 'A történet a szerzőtől megszokott módon rendkívül csavaros, a feszültség oldalról oldalra nő, a megfejtéstől pedig leesik az állunk. A kor olvasóinak azonban még egy szempontból különleges élményt jelenthetett a regény: a cselekménybe ugyanis Agatha Christie beépítette az évszázad bűnügyének nevezett, brutális gyermekgyilkossági esetet, mely "a Lindbergh bébi elrablása" néven híresült el világszerte.\n' +
+      '\n' +
+      'A híres Orient expressz a hóban vesztegel. Az egyik utas holtan fekszik a kabinjában, testét tizenkét késszúrás járta át. Az ajtó belülről zárva. A vonaton tizenkét utas maradt, a legkülönbözőbb társadalmi osztályból és nemzetiségből, ám mind egyre idegesebbek. Vagy van más is, ami összeköti őket?\n' +
+      'Hercule Poirot, a legendás nyomozó csak a kis szürke agysejtjeire támaszkodhat a hóviharban rekedt luxusvonaton. Egyetlen dolog biztos: a gyilkos az utasok közt van, és Poirot-nak meg kell találnia, mielőtt újra lesújt...'
+  },
+  {
+    id : '9789635398768',
+    title : 'A hűséges',
+    author : 'Veronica Roth',
+    publisher : 'Ciceró Könyvstúdió Kft',
+    year : '2014',
+    pages : '451',
+    price : '2542',
+    genre: 'sci-fi',
+    img : 'a_huseges',
+    description : 'Darabjaira hullott a csoportokra épülő társadalom, amelyben Tris Prior hitt korábban: erőszakos cselekmények és hatalmi harcok vezettek a széteséséhez, a túlélők veszteségek és árulások sebeit hordozzák. Tris ezért aztán él a felkínált lehetőséggel, hogy feltérképezze a város általa ismert határain túli világot. Hátha ott, a kerítésen túl megadatik neki és Tobiasnak, hogy elkezdjék egyszerű, közös életüket, amelyet nem terhelnek szövevényes hazugságok, érdek-összefonódások és fájdalmas emlékek.\n' +
+      'Az új világ azonban félelmetesebbnek bizonyul, mint amelyet Tris maga mögött hagyott. A korábbi felismerések értelmüket veszítik, veszélyes új igazságok formálják át az embereket, akiket szeretett. Trisnek ismét meg kell vívnia a maga csatáját, hogy megérthesse a bonyolult emberi természetet és önmagát: képtelennél képtelenebb döntéseket kell hoznia a bátorság, a hűség, az áldozatkészség és a szeretet próbatételei során. '
+  },
+  {
+    id : '9789635399239',
+    title : 'A lázadó',
+    author : 'Veronica Roth',
+    publisher : 'Ciceró Könyvstúdió Kft.',
+    year : '2015',
+    pages : '440',
+    price : '2691',
+    genre: 'sci-fi',
+    img : 'a_lazado',
+    description : 'Egyetlen döntésed hatására megváltozhatsz - vagy akár meg is semmisülhetsz. Minden egyes választásunknak megvannak a maga következményei - Tris Prior is megtapasztalja ezt, amikor nyugtalanság s zavar támad körülötte a társadalom valamennyi csoportjában. Meg kell próbálnia megmenteni a szeretteit - és önmagát -, miközben újra meg újra szembesül a fájdalom, a megbocsátás, az azonosulás, a hűség, a politika, a szerelem és a szeretet kérdéseivel.'
+  },
+  {
+    id : '9789636140328',
+    title : 'Bogar bárd meséi',
+    author : 'J.K. Rowling',
+    publisher : 'Animus Kiadó',
+    year : '2020',
+    pages : '144',
+    price : '2533',
+    genre: 'fantasy',
+    img : 'bogar_bard_mesei',
+    description : 'Bogar bárd elbűvölő, varázslattal és furfanggal teli történetei évszázadok óta közkedvelt esti mesék a varázslócsaládok körében. A szöveget a rúnaírásos eredetiből Hermione Granger fordította, Albus Dumbledore professzor kísérő jegyzeteit a Roxforti Levéltár szíves engedélyével közöljük.'
+  },
+  {
+    id : '9786155653056',
+    title : 'Bábel',
+    author : 'Leiner Laura',
+    publisher : 'Carta TEEN',
+    year : '2020',
+    pages : '512',
+    price : '2975',
+    genre: 'ifjúsági regény',
+    img : 'babel',
+    description : 'Zsófi tizenhét éves és RHCP rajongói blogot ír, ezért nem is kérdés, hogy az idei Bábelfesztre egész hetes bérletet vesz, hiszen az utolsó nap sztárfellépője a Red Hot Chili Peppers.\n' +
+      'Zsófinak ez lesz élete első fesztiválja, amelyen barátaival, Napsival, Abdullal, Hipóval és Szaszával együtt vesznek részt. Ez pedig azt is jelenti, hogy többnapos, ismeretlen olaszok utáni hajtóvadászat, az orvosi sátorban töltött hosszú órák és a VIP-szekcióba való kétségbeesett bejutási kísérletek is várnak rájuk. A folyamatos bulizás, sátorozás, a koncertek és a legelképesztőbb közös élmények felejthetetlenné teszik ezt a hét napot, sőt, talán az egész nyarat.'
+  },
+  {
+    id : '9781421596020',
+    title : 'Bleach, Vol. 74',
+    author : 'Tite Kubo',
+    publisher : 'Viz Media, Subs. of Shogakukan Inc',
+    year : '2018',
+    pages : '232',
+    price : '2640',
+    genre: 'manga',
+    img : 'bleach_vol74',
+    description : 'Part-time student, full-time Soul Reaper, Ichigo is one of the chosen few guardians of the afterlife.\n' +
+      '\n' +
+      'Ichigo Kurosaki never asked for the ability to see ghosts--he was born with the gift. When his family is attacked by a Hollow--a malevolent lost soul--Ichigo becomes a Soul Reaper, dedicating his life to protecting the innocent and helping the tortured spirits themselves find peace. Find out why Tite Kubo\'s Bleach has become an international manga smash-hit\n' +
+      '\n' +
+      'The final battle against Yhwach gets under way as Ichigo and his allies reach the Quincy King\'s throne room. Can Ichigo put an end to the thousand-year war between the Soul Reapers and Quincies? The emotional conclusion of Bleach is here.'
+  },
 ];
 
-/* new record template
-  {
-    id : '',
-    title : '',
-    author : '',
-    publisher : '',
-    year : '',
-    pages : '',
-    price : '',
-    genre: 'fantasy',
-    img : '',
-    description : ''
-  },
- */

@@ -39,9 +39,11 @@ export class CartService {
   }
 
   removeCartItem(product: any) {
+    let deleted: number = 0;
     this.cartItemList.map((a: any, index: any) => {
-      if(product.id === a.id) {
+      if(product.id === a.id && deleted === 0) {
         this.cartItemList.splice(index,1);
+        deleted++;
       }
     });
     this.productList.next(this.cartItemList);

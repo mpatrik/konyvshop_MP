@@ -1,5 +1,5 @@
 .signup-container {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .div-flex {
@@ -54,6 +54,7 @@ h1 {
 .error {
   font-size: 20px;
   color: red;
+  margin-bottom: 6px;
 }
 
 @media screen and (max-width: 599px) {
@@ -70,7 +71,8 @@ h1 {
 
 @media screen and (max-height: 599px) {
   .div-flex {
-    height: 95%;
+    min-height: 100%;
+    margin-bottom: 10%;
   }
 
 }
