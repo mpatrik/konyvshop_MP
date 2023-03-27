@@ -232,7 +232,7 @@ export const books = [
   {
     id : '9789634795858',
     title : 'Gyilkosság az Orient Expresszen',
-    author : ' gatha Christie',
+    author : 'Agatha Christie',
     publisher : 'Helikon Kiadó',
     year : '2022',
     pages : '292',

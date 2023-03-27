@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {Observable, Subscriber} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +6,7 @@ import {Observable, Subscriber} from "rxjs";
 export class FakeLoadingService {
 
   constructor() { }
-
+/*
   loadingWithPromise(email: string, password: string): Promise<boolean> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -18,8 +17,8 @@ export class FakeLoadingService {
         }
       }, 3000)
     });
-  }
-
+  }*/
+/*
   loadingWithObservable(email: string, password: string): Observable<boolean> {
     return new Observable((subscriber: Subscriber<boolean>) => {
       let i = 0;
@@ -35,5 +34,6 @@ export class FakeLoadingService {
         }
       }, 1000)
     });
-  }
+  }*/
+
 }

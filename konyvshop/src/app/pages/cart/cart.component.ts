@@ -1,8 +1,6 @@
-import {Component, OnChanges, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CartService} from "../../shared/services/cart.service";
 import {FormControl, FormGroup} from "@angular/forms";
-import {User} from "../../shared/models/User";
-import {UserService} from "../../shared/services/user.service";
 import {Order} from "../../shared/models/Order";
 
 @Component({
@@ -29,7 +27,6 @@ export class CartComponent implements OnInit {
       homeNumber: new FormControl()
     }),
   });
-  static orderId: number = 1;
 
   orderSuccess: boolean = false;
   emailFormat: boolean = true;
@@ -59,7 +56,7 @@ export class CartComponent implements OnInit {
     if(this.orderForm.get('email')?.value.split('@').length===2 && this.orderForm.get('payType')?.value && this.orderForm.get('name.firstname')?.value && this.orderForm.get('name.lastname')?.value &&
       this.orderForm.get('address.postCode')?.value && this.orderForm.get('address.city')?.value && this.orderForm.get('address.street')?.value && this.orderForm.get('address.homeNumber')?.value) {
       const order: Order = {
-        id: CartComponent.orderId,
+        id: Math.round((Math.random()+1)*1000000),
         payType: this.orderForm.get('payType')?.value,
         email: this.orderForm.get('email')?.value,
         name: {
@@ -76,7 +73,6 @@ export class CartComponent implements OnInit {
         totalPrice: this.grandTotal
       }
       this.cartService.createOrder(order).then(_ => {
-        CartComponent.orderId++;
         this.orderSuccess = true;
         this.emptyCart();
         console.log('Order successfully added.');

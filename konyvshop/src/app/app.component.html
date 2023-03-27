@@ -16,7 +16,7 @@
           <li><a routerLink="products">könyvek</a></li>
           <li *ngIf="!(loggedInUser)"><a routerLink="login">belépés</a></li>
           <li *ngIf="!(loggedInUser)"><a routerLink="signup">regisztráció</a></li>
-          <li *ngIf="loggedInUser"><a routerLink="login" (click)="logout()">kilépés</a></li>
+          <li *ngIf="loggedInUser"><a (click)="logout()">kilépés</a></li>
           <li class="cart" routerLink="cart">
             <mat-icon class="cart-menu-icon">shopping_cart<div class="cart-quantity" *ngIf="totalItem">{{totalItem}}</div></mat-icon>
           </li>
@@ -30,3 +30,4 @@
   </mat-sidenav-content>
 </mat-sidenav-container>
 <app-footer></app-footer>
+

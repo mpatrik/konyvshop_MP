@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AuthGuard} from "./shared/services/auth.guard";
+import {LoggedInAuthGuard} from "./shared/services/logged-in-auth.guard";
 
 const routes: Routes = [
   {
@@ -13,15 +13,17 @@ const routes: Routes = [
   },
   {
     path: 'cart',
-    loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule),
+    loadChildren: () => import('./pages/cart/cart.module').then(m => m.CartModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule)
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule),
+    canActivate: [LoggedInAuthGuard]
   },
   {
     path: 'signup',
-    loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignupModule)
+    loadChildren: () => import('./pages/signup/signup.module').then(m => m.SignupModule),
+    canActivate: [LoggedInAuthGuard]
   },
   {
     path: 'not-found',

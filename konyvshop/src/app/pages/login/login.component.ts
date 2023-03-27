@@ -1,10 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {FormControl} from "@angular/forms";
 import {Router} from "@angular/router";
-import {FakeLoadingService} from "../../shared/services/fake-loading.service";
-import {Observable, Subscription} from "rxjs";
+import {Subscription} from "rxjs";
 import {AuthService} from "../../shared/services/auth.service";
-import {User} from "../../shared/models/User";
 import {UserService} from "../../shared/services/user.service";
 
 @Component({
@@ -22,7 +20,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   loading: boolean = false;
   loginError: boolean = false;
 
-  constructor(private router: Router, private loadingService: FakeLoadingService, private authService: AuthService, private userService: UserService) { }
+  constructor(private router: Router, private authService: AuthService, private userService: UserService) { }
 
   ngOnInit(): void {
   }
